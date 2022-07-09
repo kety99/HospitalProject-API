@@ -26,6 +26,7 @@ public class DirectorController {
 
     @PostMapping("")
     public Director save(@RequestBody Director director) {
+        director.setAccountValid(true);
         return this.directrorSerivce.save(director);
     }
 

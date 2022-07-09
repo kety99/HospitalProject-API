@@ -21,6 +21,7 @@ public class UserController {
 
     @PostMapping(path = "/create")
     public User create(@RequestBody User user) {
+        user.setAccountValid(true);
         return this.userService.save(user);
     }
 

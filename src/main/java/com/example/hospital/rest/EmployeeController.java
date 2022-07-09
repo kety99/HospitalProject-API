@@ -25,6 +25,7 @@ public class EmployeeController {
 
     @PostMapping("")
     public Employee save(@RequestBody Employee employee){
+        employee.setAccountValid(true);
         return this.employeeService.save(employee);
     }
 

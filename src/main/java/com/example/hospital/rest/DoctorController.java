@@ -25,6 +25,7 @@ public class DoctorController {
 
     @PostMapping("")
     public Doctor save(@RequestBody Doctor doctor) {
+        doctor.setAccountValid(true);
         return this.doctorService.save(doctor);
     }
 
